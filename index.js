@@ -1,5 +1,6 @@
 // Add Express
 const express = require("express");
+const welcome = require("./routes/welcome")
 
 // Initialize Express
 const app = express();
@@ -8,6 +9,8 @@ const app = express();
 app.get("/", (req, res) => {
   res.send("Express on Vercel");
 });
+
+app.get("/welcome", welcome);
 
 // Initialize server
 app.listen(5000, () => {
